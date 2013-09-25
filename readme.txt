@@ -18,3 +18,11 @@ This plugin tries to fix things when you use GD for resizing. Currently when an 
 1. Upload the folder improved-td-image-editor to the /wp-content/plugins/ directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Done!
+
+== Changelog ==
+
+= 0.2 ( 2013-09-29 ) =
+* Fixed issue on activation
+
+= 0.1 ( 2013-07-10 ) =
+* First version that add IPTC support
