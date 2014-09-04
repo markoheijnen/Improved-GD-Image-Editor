@@ -2,7 +2,7 @@
 Contributors: CodeKitchen, markoheijnen
 Tags: image, manipulation
 Requires at least: 3.5
-Tested up to: 3.6
+Tested up to: 4.0
 Stable tag: 1.1
 License: GPLv2 or later
 
