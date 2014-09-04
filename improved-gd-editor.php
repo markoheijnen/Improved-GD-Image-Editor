@@ -9,8 +9,9 @@ Author URI: https://github.com/markoheijnen/improved-gd-editor/
 */
 
 function image_editors_add_improved_gd_editor( $editors ) {
-	if( ! class_exists('WP_Image_Editor_Gmagick') )
+	if ( ! class_exists( 'WP_Image_Editor_GD_Improved' ) ) {
 		include_once 'editor.php';
+	}
 
 	array_pop( $editors );
 	array_push( $editors, 'WP_Image_Editor_GD_Improved' );
