@@ -4,13 +4,15 @@ class WP_Image_Editor_GD_Improved extends WP_Image_Editor_GD {
 	private $iptc = null;
 
 	private function get_iptc() {
-		if( ! $this->iptc ) {
+		if ( ! $this->iptc ) {
 			$image = getimagesize( $this->file, $info );
 
-			if( isset( $info['APP13'] ) )
+			if ( isset( $info['APP13'] ) ) {
 				$this->iptc = $info['APP13'];
-			else
+			}
+			else {
 				$this->iptc = $this->image_metadata_to_iptc();
+			}
 		}
 
 		return $this->iptc;
@@ -18,12 +20,12 @@ class WP_Image_Editor_GD_Improved extends WP_Image_Editor_GD {
 
 	protected function _save( $image, $filename = null, $mime_type = null ) {
 		$file_info = parent::_save( $image, $filename, $mime_type );
-		$iptc = $this->get_iptc();
+		$iptc      = $this->get_iptc();
 
-		if( $iptc ) {
+		if ( $iptc ) {
 			$content = iptcembed( $iptc, $file_info['path'] );
 
-			if( $content ) {
+			if ( $content ) {
 				$fp = fopen( $file_info['path'], "wb");
 				fwrite( $fp, $content );
 				fclose( $fp );
@@ -48,7 +50,7 @@ class WP_Image_Editor_GD_Improved extends WP_Image_Editor_GD {
 
 		$data = '';
 
-		foreach( $iptc as $tag => $string ) {
+		foreach ( $iptc as $tag => $string ) {
 			$tag   = substr( $tag, 2 );
 			$data .= $this->iptc_make_tag( 2, $tag, $string );
 		}
@@ -62,16 +64,16 @@ class WP_Image_Editor_GD_Improved extends WP_Image_Editor_GD {
 		$length = strlen($value);
 		$retval = chr(0x1C) . chr($rec) . chr($data);
 
-		if($length < 0x8000) {
+		if ($length < 0x8000) {
 			$retval .= chr($length >> 8) .  chr($length & 0xFF);
 		}
 		else {
-			$retval .= chr(0x80) . 
-					   chr(0x04) . 
-					   chr(($length >> 24) & 0xFF) . 
-					   chr(($length >> 16) & 0xFF) . 
-					   chr(($length >> 8) & 0xFF) . 
-					   chr($length & 0xFF);
+			$retval .= chr( 0x80 ) . 
+					   chr( 0x04 ) . 
+					   chr( ($length >> 24) & 0xFF ) . 
+					   chr( ($length >> 16) & 0xFF ) . 
+					   chr( ($length >> 8) & 0xFF ) . 
+					   chr( $length & 0xFF );
 		}
 
 		return $retval . $value;
