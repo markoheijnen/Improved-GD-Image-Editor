@@ -3,7 +3,7 @@ Contributors: CodeKitchen, markoheijnen
 Tags: image, manipulation
 Requires at least: 3.5
 Tested up to: 3.6
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 
 Improving the current GD implementation
@@ -21,8 +21,9 @@ This plugin tries to fix things when you use GD for resizing. Currently when an 
 
 == Changelog ==
 
-= 0.2 ( 2013-09-29 ) =
+= 1.2 ( 2014-09-04 ) =
 * Fixed issue on activation
+* Fix check if editor was already loaded
 
-= 0.1 ( 2013-07-10 ) =
+= 1.0 ( 2013-07-10 ) =
 * First version that add IPTC support

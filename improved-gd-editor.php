@@ -4,7 +4,7 @@ Plugin Name: Improved GD Image Editor
 Plugin URI: http://wordpress.org/extend/plugins/improved-gd-editor/
 Description: Adds some improved GD handling
 Author: Marko Heijnen
-Version: 1.0
+Version: 1.1
 Author URI: https://github.com/markoheijnen/improved-gd-editor/
 */
 
