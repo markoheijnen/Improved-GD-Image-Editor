@@ -21,7 +21,7 @@ This plugin tries to fix things when you use GD for resizing. Currently when an 
 
 == Changelog ==
 
-= 1.2 ( 2014-09-04 ) =
+= 1.1 ( 2014-09-04 ) =
 * Fixed issue on activation
 * Fix check if editor was already loaded
 
