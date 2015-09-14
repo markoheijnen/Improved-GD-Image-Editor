@@ -1,8 +1,9 @@
 === Improved GD Image Editor ===
 Contributors: CodeKitchen, markoheijnen
+Donate link: https://markoheijnen.com/donate
 Tags: image, manipulation
 Requires at least: 3.5
-Tested up to: 4.0
+Tested up to: 4.3
 Stable tag: 1.1
 License: GPLv2 or later
 

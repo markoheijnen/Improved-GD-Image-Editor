@@ -1,11 +1,14 @@
 <?php
 /*
-Plugin Name: Improved GD Image Editor
-Plugin URI: http://wordpress.org/extend/plugins/improved-gd-editor/
-Description: Adds some improved GD handling
-Author: Marko Heijnen
-Version: 1.1
-Author URI: https://github.com/markoheijnen/improved-gd-editor/
+	Plugin Name: Improved GD Image Editor
+	Description: Adds some improved GD handling
+	Version: 1.1
+
+	Plugin URI: http://wordpress.org/extend/plugins/improved-gd-editor/
+	
+	Author: Marko Heijnen
+	Author URI: https://github.com/markoheijnen/improved-gd-editor/
+	Donate link: https://markoheijnen.com/donate
 */
 
 function image_editors_add_improved_gd_editor( $editors ) {
